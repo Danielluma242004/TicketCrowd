@@ -210,24 +210,25 @@ export const EventCard: React.FC<EventCardProps> = (event) => {
       <p className="text-gray-500 mb-4 text-lg">{event.description}</p>
 
       <div className="flex flex-col space-y-2 ">
-        <p className="text-gray-800">
-          <strong className="text-violet-600 text-xl">Location:</strong>{" "}
-          {event.location}
+        <p className="text-gray-800 flex items-center">
+          <strong className="text-xl w-1/3">Location:</strong>
+          <span>{event.location}</span>
         </p>
-        <p className="text-gray-800">
-          <strong className="text-violet-600 text-xl">Date:</strong>{" "}
-          {event.date}
+        <p className="text-gray-800 flex items-center">
+          <strong className="text-xl w-1/3">Date:</strong>
+          <span>{event.date}</span>
         </p>
-        <p className="text-gray-800">
-          <strong className="text-violet-600 text-xl">Time:</strong>{" "}
-          {event.time}
+        <p className="text-gray-800 flex items-center">
+          <strong className="text-xl w-1/3">Time:</strong>
+          <span>{event.time}</span>
         </p>
-        <p className="text-gray-800">
-          <strong className="text-violet-600 text-xl">Organizer:</strong>{" "}
-          {organizer}
+        <p className="text-gray-800 flex items-center">
+          <strong className="text-xl w-1/3">Organizer:</strong>
+          <span>{organizer}</span>
         </p>
         <hr></hr>
       </div>
+
       {!isModalCommunityOpen && (
         <button
           onClick={toggleSeeCommunity}
